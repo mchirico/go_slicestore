@@ -7,6 +7,9 @@ import (
 	"net/http"
 )
 
+
+
+
 func Get(url string, username string, password string) []byte {
 
 	http.DefaultTransport.(*http.Transport).TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
