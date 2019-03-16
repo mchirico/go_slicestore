@@ -20,7 +20,7 @@ func (q *Query) QueryList(d DateType) {
 
 		url := fmt.Sprintf("https://%s/manager/api/json/1.0/"+
 			"vaultUsageReport.adm?"+
-			"dateRange=true&startDate=%s&endDate=%s", y.Yaml.IP,v.Start, v.End)
+			"dateRange=true&startDate=%s&endDate=%s", y.Yaml.IP, v.Start, v.End)
 
 		data := Get(url, y.Yaml.Username, y.Yaml.Password)
 
@@ -28,13 +28,13 @@ func (q *Query) QueryList(d DateType) {
 		vend := strings.Replace(v.End, "/", "_", -1)
 
 		file := fmt.Sprintf("fixtures_%s_%s", vstart, vend)
-		log.Printf("write: %s\n",file)
+		log.Printf("write: %s\n", file)
 		Write(file, data)
 
 	}
 }
 
-func (q *Query) Query() [] byte {
+func (q *Query) Query() []byte {
 	y := yamlpkg.Config{}
 	file := fmt.Sprintf("%s/sliceStore.yaml", os.Getenv("HOME"))
 	y.Read(file)

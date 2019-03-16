@@ -11,7 +11,6 @@ func main() {
 	d.GetStruct(q.Query())
 	fmt.Printf("%v", d.ResponseData.VaultUsageReport.Vaults[0].Name)
 
-
 	// Get a list for fixture to test
 	pkg.DateFormat = "01/02/2006"
 	dt := pkg.DateType{}
@@ -23,4 +22,3 @@ func main() {
 	q.QueryList(dt)
 
 }
-
