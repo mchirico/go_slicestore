@@ -16,6 +16,8 @@ func (q *Query) QueryList(d DateType) {
 	file := fmt.Sprintf("%s/sliceStore.yaml", os.Getenv("HOME"))
 	y.Read(file)
 
+	p := Pdata()
+
 	for _, v := range d.list.Days {
 
 		url := fmt.Sprintf("https://%s/manager/api/json/1.0/"+
@@ -29,9 +31,12 @@ func (q *Query) QueryList(d DateType) {
 
 		file := fmt.Sprintf("fixtures_%s_%s", vstart, vend)
 		log.Printf("write: %s\n", file)
-		Write(file, data)
+
+		p.Add(data)
 
 	}
+	p.FormatNames()
+	p.Write("allData.csv")
 }
 
 func (q *Query) Query() []byte {
