@@ -15,7 +15,7 @@ matrix:
     - go get gopkg.in/yaml.v2
     before_install:
     - openssl aes-256-cbc -k "$super_secret_password" -in fixtures/data.enc -out fixtures/data -d
-    - for i in $(ls fixtures/fixtures_*.enc); do openssl aes-256-cbc -k "$super_secret_password" -in ${i} -out ${i%%.*} -d
+    - for i in $(ls fixtures/fixtures_*.enc); do openssl aes-256-cbc -k "$super_secret_password" -in ${i} -out ${i%%.*} -d; done
     - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
       > ./cc-test-reporter
     - chmod +x ./cc-test-reporter
