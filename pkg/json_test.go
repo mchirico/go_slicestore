@@ -53,18 +53,14 @@ func TestWorkWithDecoded(t *testing.T) {
 	d := DS{}
 	d.GetStruct(source)
 
-
-	start  := d.ResponseData.VaultUsageReport.DateRange.StartDate
+	start := d.ResponseData.VaultUsageReport.DateRange.StartDate
 	if start != "2019-01-01" {
-		t.Fatalf("Can not read start:\n%s\n",start)
+		t.Fatalf("Can not read start:\n%s\n", start)
 	}
 
 	length := len(d.ResponseData.VaultUsageReport.Vaults)
 	if length != 90 {
-		t.Fatalf("Length not correct:\n%d\n",length)
+		t.Fatalf("Length not correct:\n%d\n", length)
 	}
-
-
-
 
 }

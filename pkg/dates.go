@@ -24,7 +24,6 @@ type DateType struct {
 	sync.Mutex
 }
 
-
 func date(year, month, day int) time.Time {
 	return time.Date(year, time.Month(month), day, 0, 0, 0, 0, time.UTC)
 }
@@ -69,7 +68,6 @@ func (d *DateType) subDaysToList(num int) {
 	d.list = days
 
 }
-
 
 func (d *DateType) Start() string {
 	return date(d.Year, d.Month, d.Day).Format(DateFormat)
