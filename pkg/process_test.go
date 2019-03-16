@@ -50,11 +50,36 @@ func TestProcess(t *testing.T) {
 
 }
 
-func TestProcess2(t *testing.T) {
+func TestPdata_FormatNames(t *testing.T) {
 
 	p.FormatNames()
-	//for k, v := range p.list {
-	//	fmt.Println(k, p.formatname[v])
-	//}
+	count := 0
+	list0 := []string{}
+	list1 := []string{}
 
+	for _, v := range p.list {
+		list0 = append(list0, p.formatname[v])
+		list1 = append(list1, v)
+		count++
+	}
+
+	if list0[62] != "stage_ipvod17" {
+		t.Fatalf("Expected: %s\nGot:%s\n",
+			"stage_ipvod17", list0[62])
+
+	}
+	if list1[62] != "stage_ipvod000017" {
+		t.Fatalf("Expected: %s\nGot:%s\n",
+			"stage_ipvod000017", list1[62])
+
+	}
+
+}
+
+func TestPdata_Write(t *testing.T) {
+	p.FormatNames()
+	err := p.Write("junk.csv")
+	if err != nil {
+		t.Fatalf("error in write: %v", err)
+	}
 }

@@ -3,11 +3,13 @@ package pkg
 import (
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"regexp"
 	"sort"
 	"strconv"
 	"strings"
+	"time"
 )
 
 type pdata struct {
@@ -77,5 +79,63 @@ func (p *pdata) FormatNames() {
 	sort.Slice(p.list, func(i, j int) bool {
 		return p.list[i] < p.list[j]
 	})
+
+}
+
+type wvault struct {
+	name  string
+	usage int64
+	start string
+	end   string
+}
+
+func (p *pdata) Write(file string) error {
+	data := ""
+
+	for row, raw := range p.raw {
+		wv := map[string]wvault{}
+		for _, vaults := range raw.ResponseData.VaultUsageReport.Vaults {
+			wv[vaults.Name] = wvault{vaults.Name, vaults.Usage,
+				vaults.ReportStart, vaults.ReportEnd}
+		}
+
+		if row == 0 {
+			str := "date"
+			sep := ""
+			for _, v := range p.list {
+
+				sep = ","
+
+				str += sep + wv[p.formatname[v]].name
+
+			}
+			data += str + "\n"
+		}
+
+		str := ""
+		sep := ""
+		for idx, v := range p.list {
+			if idx == 0 {
+
+				t, _ := time.Parse("Mon, 02 Jan 2006 15:04:05 +0000",
+					wv[p.formatname[v]].start)
+
+				str += t.Format("01-02-2006") + "," + fmt.Sprintf("%d", wv[p.formatname[v]].usage)
+			} else {
+				sep = ","
+
+				str += sep + fmt.Sprintf("%d", wv[p.formatname[v]].usage)
+			}
+
+		}
+		data += str + "\n"
+
+	}
+
+	err := ioutil.WriteFile(file, []byte(data), 0600)
+	if err != nil {
+		log.Printf("error in yaml write: %v", err)
+	}
+	return err
 
 }
