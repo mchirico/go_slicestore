@@ -28,8 +28,8 @@ func basicAuth() []byte {
 		"https://%s/manager/api/json/1.0/vaultUsageReport.adm?dateRange=true&startDate=03/01/2019&endDate=03/02/2019",
 		y.Yaml.IP)
 
-	var username string = y.Yaml.Username
-	var passwd string = y.Yaml.Password
+	var username = y.Yaml.Username
+	var passwd = y.Yaml.Password
 	http.DefaultTransport.(*http.Transport).TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
 
 	client := &http.Client{}
