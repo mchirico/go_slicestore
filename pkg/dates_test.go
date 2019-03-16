@@ -119,7 +119,6 @@ func TestAddDays(t *testing.T) {
 
 }
 
-
 func TestDateType_Format(t *testing.T) {
 
 	DateFormat = "01/02/2006"
@@ -139,8 +138,6 @@ func TestDateType_Format(t *testing.T) {
 	if diff != true {
 		t.Fatalf("Expected: %v\nGot: %v\n", expected, d.list.Days)
 	}
-
-
 
 	log.Printf("%v\n", d.list.Days)
 

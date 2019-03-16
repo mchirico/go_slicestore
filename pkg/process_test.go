@@ -7,8 +7,7 @@ import (
 	"testing"
 )
 
-var p  Pdata
-
+var p pdata
 
 func TestMain(m *testing.M) {
 	SetupFunction()
@@ -19,7 +18,7 @@ func TestMain(m *testing.M) {
 
 func SetupFunction() {
 
-	p = Pdata{}
+	p = Pdata()
 	data, err := ioutil.ReadFile("../fixtures/" +
 		"fixtures_01_01_2019_01_02_2019")
 
@@ -39,7 +38,6 @@ func TeardownFunction() {
 
 }
 
-
 func TestProcess(t *testing.T) {
 
 	if len(p.raw[0].ResponseData.VaultUsageReport.Vaults) != 90 {
@@ -54,20 +52,9 @@ func TestProcess(t *testing.T) {
 
 func TestProcess2(t *testing.T) {
 
-	if len(p.raw[0].ResponseData.VaultUsageReport.Vaults) != 90 {
-		t.Fatalf("Problem with read. Expected 90")
-	}
-
-	if len(p.raw) != 2 {
-		t.Fatalf("Problem with p.raw  Expected 2")
-	}
+	p.FormatNames()
+	//for k, v := range p.list {
+	//	fmt.Println(k, p.formatname[v])
+	//}
 
 }
-
-
-
-
-
-
-
-
