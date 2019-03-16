@@ -5,3 +5,32 @@
 Pull Data from Slice Store
 
 [IBM API Reference](https://www.ibm.com/support/knowledgecenter/STXNRM_3.14.3/coss.doc/managerapi834a.html#managerapi-gen833)
+
+
+
+
+
+## Build with Vendor
+
+```bash
+
+git clone https://github.com/mchirico/go_slicestore.git
+cd go_slicestore
+
+export GO111MODULE=on
+go mod init
+# Below will put all packages in a vendor folder
+go mod vendor
+
+
+
+go test -v -mod=vendor ./...
+
+# Don't forget the "." in "./cmd/getdata" below
+go build -v -mod=vendor ./cmd/getdata
+
+# You can now run
+
+./getdata
+
+```

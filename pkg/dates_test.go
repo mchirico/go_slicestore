@@ -2,6 +2,7 @@ package pkg
 
 import (
 	"log"
+	"reflect"
 	"testing"
 )
 
@@ -49,11 +50,24 @@ func Test(t *testing.T) {
 }
 
 func TestDateType_AddDaysToList(t *testing.T) {
+
+	DateFormat =  "01-02-2006"
+
 	d := DateType{}
 	d.Year = 2019
 	d.Month = 3
 	d.Day = 1
 	d.AddDaysToList(3)
+	expected := []Day{{"03-01-2019","03-02-2019"},
+		{"03-02-2019","03-03-2019"},
+		{"03-03-2019","03-04-2019"},
+	}
+
+	diff := reflect.DeepEqual(d.list.Days, expected)
+
+	if diff != true {
+		t.Fatalf("Expected: %v\nGot: %v\n",expected,d.list.Days)
+	}
 	log.Printf("%v\n",d.list.Days)
 
 }
@@ -73,7 +87,16 @@ func TestAddDays(t *testing.T) {
 	days.Days = append(days.Days, day )
 
 	d.list = days
-	log.Printf("%v\n",d.list.Days)
+
+	expected := []Day{{"0","1"},{"1","2"}}
+
+	diff := reflect.DeepEqual(d.list.Days, expected)
+
+	if diff != true {
+		t.Fatalf("Expected: %v\nGot: %v\n",expected,d.list.Days)
+	}
+
+
 
 }
 
