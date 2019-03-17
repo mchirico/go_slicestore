@@ -8,6 +8,16 @@ Pull Data from Slice Store
 
 
 
+## Build
+
+```bash
+
+go get -u github.com/mchirico/date/parse
+go get gopkg.in/yaml.v2
+
+```
+
+
 
 
 ## Build with Vendor
