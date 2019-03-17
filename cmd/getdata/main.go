@@ -71,9 +71,7 @@ EOF
 
 }
 
-
 func process(q *pkg.Query) {
-
 
 	pkg.DateFormat = "01/02/2006"
 	dt := pkg.DateType{}

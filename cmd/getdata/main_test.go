@@ -30,7 +30,6 @@ func TeardownFunction() {
 
 }
 
-
 func Test_process(t *testing.T) {
 
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -77,7 +76,6 @@ func Test_process(t *testing.T) {
 
 	process(q)
 
-
 	resultFile, err := ioutil.ReadFile("allData.csv")
 	if err != nil {
 
@@ -85,7 +83,7 @@ func Test_process(t *testing.T) {
 	}
 
 	if len(resultFile) != 208651 {
-		t.Fatalf("File not correct: %v\n",len(resultFile))
+		t.Fatalf("File not correct: %v\n", len(resultFile))
 	}
 
 	expected := "01-01-2019,2"
@@ -93,6 +91,4 @@ func Test_process(t *testing.T) {
 		t.Fatalf("Values not in file")
 	}
 
-
 }
-
