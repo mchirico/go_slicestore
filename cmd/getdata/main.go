@@ -20,13 +20,43 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
- */
+*/
 package main
 
 import (
+	"flag"
+	"fmt"
+	"github.com/mchirico/date/parse"
 	"github.com/mchirico/go_slicestore/pkg"
 	"log"
+	"time"
 )
+
+var startDateFlag = flag.String("start", "6/1/2018", "Start Date")
+var endDateFlag = flag.String("end", "now", "End Date")
+
+func init() {
+	flag.Usage = func() {
+		fmt.Printf(`
+
+
+Examples:
+
+    	  ./getdata -start "1/1/2019"
+
+    	  ./getdata -start "1/1/2019"  -end "3/1/2019"
+
+
+    If you don't specify and end, then, it will default to now
+
+
+`)
+
+		//flag.PrintDefaults()
+	}
+	flag.Parse()
+
+}
 
 func main() {
 
@@ -37,10 +67,22 @@ func main() {
 	pkg.DateFormat = "01/02/2006"
 	dt := pkg.DateType{}
 
-	dt.Year = 2018
-	dt.Month = 7
-	dt.Day = 1
-	dt.AddDaysToList(25)
+	tt, err := parse.DateTimeParse("1/2/2018").GetTimeLoc()
+	if err != nil {
+		fmt.Printf("err: %v\n", err)
+		return
+	}
+
+	days := int(time.Since(tt).Hours() / 24)
+
+	dt.Year = int(tt.Year())
+	dt.Month = int(tt.Month())
+	dt.Day = int(tt.Day())
+	dt.AddDaysToList(days + 1)
+
+	fmt.Printf("Year: %d  Month: %d  Day: %d  AddDays: %d\n",
+		dt.Year, dt.Month, dt.Day, days+1)
+
 	q.QueryList(dt)
 
 }
