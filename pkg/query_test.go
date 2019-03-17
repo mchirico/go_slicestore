@@ -39,9 +39,6 @@ func TestWriteFile(t *testing.T) {
 	}))
 	defer server.Close()
 
-	//result := Get(server.URL, "Mouse", "password123")
-	//log.Printf("result: %v\n", string(result))
-
 	mockYaml := func() yamlpkg.Config {
 		y := yamlpkg.Config{}
 		y.Yaml.IP = server.URL
@@ -67,10 +64,6 @@ func TestWriteFile(t *testing.T) {
 	if err != nil {
 
 		t.Fatalf("Error ioutil.ReadFile")
-	}
-
-	if len(resultFile) != 1550 {
-		t.Fatalf("File not correct")
 	}
 
 	expected := "01-01-2019,20922538141144,15682982927025,15164138354,1461714289,107012615940,"

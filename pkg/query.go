@@ -75,12 +75,34 @@ func Write(file string, data []byte) error {
 	return ioutil.WriteFile(file, data, 0644)
 }
 
-// For testing
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++
+                      For testing
+   +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Reference in query_test.go the following:
+
+mockYaml := func() yamlpkg.Config {
+		y := yamlpkg.Config{}
+		y.Yaml.IP = server.URL
+		y.Yaml.Password = "password123"
+		y.Yaml.Username = "Mouse"
+
+		return y
+	}
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 func MockURL(ip string, start string, end string) string {
-	log.Printf("Example call:\n%s/manager/api/json/1.0/"+
-		"vaultUsageReport.adm?"+
-		"dateRange=true&startDate=%s&endDate=%s\n", ip, start, end)
+
+	debug := false
+
+	if debug {
+		log.Printf("Example call:\n%s/manager/api/json/1.0/"+
+			"vaultUsageReport.adm?"+
+			"dateRange=true&startDate=%s&endDate=%s\n", ip, start, end)
+	}
 
 	return ip
 }

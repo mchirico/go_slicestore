@@ -11,6 +11,7 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"os"
+	"os/exec"
 	"strings"
 	"testing"
 )
@@ -28,6 +29,32 @@ func SetupFunction() {
 
 func TeardownFunction() {
 
+}
+
+func TestHelpFlag(t *testing.T) {
+
+	// This is true on 2nd pass through this function.
+	if os.Getenv("BE_CRASHER") == "1" {
+		flag.Set("g", "dead") // Set the Flag
+		main()                // Call to main
+		return
+	}
+
+	cmd := exec.Command(os.Args[0], "-h", "-test.run=TestFatalExit")
+	cmd.Env = append(os.Environ(), "BE_CRASHER=1")
+
+	//err := cmd.Run()
+	output, err := cmd.Output()
+	if strings.Contains(string(output), "You must have") != true {
+		t.Fatalf("Error: No help message:%s", string(output))
+	}
+
+	t.Logf("Should see help msg: %s\n", output)
+	if e, ok := err.(*exec.ExitError); ok && !e.Success() {
+		return
+	}
+
+	t.Fatalf("process ran with err %v, want exit status 1", err)
 }
 
 func Test_process(t *testing.T) {
@@ -80,10 +107,6 @@ func Test_process(t *testing.T) {
 	if err != nil {
 
 		t.Fatalf("Error ioutil.ReadFile")
-	}
-
-	if len(resultFile) != 208651 {
-		t.Fatalf("File not correct: %v\n", len(resultFile))
 	}
 
 	expected := "01-01-2019,2"
