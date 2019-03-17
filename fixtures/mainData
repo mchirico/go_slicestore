@@ -1,0 +1,828 @@
+{
+  "responseStatus": "ok",
+  "responseHeader": {
+    "now": 1552591640225,
+    "status": "ok",
+    "requestId": "XIqrGKwRAAIAAAnKPogAAAAL"
+  },
+  "responseData": {
+    "vaultUsageReport": {
+      "dateRange": {
+        "startDate": "2019-01-01",
+        "endDate": "2019-01-02"
+      },
+      "vaults": [
+        {
+          "id": 93,
+          "uuid": "b8e21f47-64ce-7b7c-119f-e86a2ada0380",
+          "name": "active_orig",
+          "storagePool": "cia-storage-pool",
+          "usage": 20922538141144,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 95,
+          "uuid": "b8bf5dcb-d949-7070-0058-2726a41f7080",
+          "name": "archive_orig",
+          "storagePool": "cia-storage-pool",
+          "usage": 15682982927025,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 94,
+          "uuid": "2d5c335c-5db7-48e8-bdb9-e9286cdc9ee1",
+          "name": "dsmgmt-cia-storage-pool",
+          "storagePool": "cia-storage-pool",
+          "usage": 15164138354,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 9,
+          "uuid": "750d2e43-386b-4655-a171-98693ce5c0ad",
+          "name": "dsmgmt-faa-storage-pool",
+          "storagePool": "faa-storage-pool",
+          "usage": 1461714289,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 8,
+          "uuid": "388c0081-e9f5-753b-01a3-f7fb5f34c880",
+          "name": "moneyduck1",
+          "storagePool": "faa-storage-pool",
+          "usage": 107012615940,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 10,
+          "uuid": "c435c269-e316-7cab-01ee-b5b451636a80",
+          "name": "moneyduck2",
+          "storagePool": "faa-storage-pool",
+          "usage": 28536139279,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 11,
+          "uuid": "9e419089-ac12-7b6e-1122-b2b2e01b9580",
+          "name": "moneyduck3",
+          "storagePool": "faa-storage-pool",
+          "usage": 47308434828,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 12,
+          "uuid": "4658bc93-3728-7067-11f3-90ce0b351080",
+          "name": "moneyduck4",
+          "storagePool": "faa-storage-pool",
+          "usage": 21111024012,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 13,
+          "uuid": "dc996fd0-7fe5-776f-013b-9b0f4738e980",
+          "name": "moneyduck5",
+          "storagePool": "faa-storage-pool",
+          "usage": 26083258152,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 14,
+          "uuid": "9d132050-bbc8-759b-1159-023fd787a080",
+          "name": "moneyduck6",
+          "storagePool": "faa-storage-pool",
+          "usage": 51666036444,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 15,
+          "uuid": "ad89a97b-d140-78ca-109d-6c736116d280",
+          "name": "moneyduck7",
+          "storagePool": "faa-storage-pool",
+          "usage": 47029927740,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 16,
+          "uuid": "169982a2-07c1-77cd-015c-9409be83f980",
+          "name": "moneyduck8",
+          "storagePool": "faa-storage-pool",
+          "usage": 39481908741,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 17,
+          "uuid": "107693d8-00dc-761f-11ac-4a2e11b39a80",
+          "name": "moneyduck9",
+          "storagePool": "faa-storage-pool",
+          "usage": 43569405960,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 18,
+          "uuid": "82cac3b1-e599-74d6-00c6-d8971a2e1580",
+          "name": "moneyduck10",
+          "storagePool": "faa-storage-pool",
+          "usage": 36992255160,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 19,
+          "uuid": "c978a9f6-e17d-7119-0198-c94ecce9f980",
+          "name": "moneyduck11",
+          "storagePool": "faa-storage-pool",
+          "usage": 40672329324,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 20,
+          "uuid": "b7461a14-d3ee-7a9c-000f-d7121c402080",
+          "name": "moneyduck12",
+          "storagePool": "faa-storage-pool",
+          "usage": 40977218616,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 21,
+          "uuid": "ddb4fed2-3ff7-77c3-0108-4d861b333080",
+          "name": "moneyduck13",
+          "storagePool": "faa-storage-pool",
+          "usage": 36970856676,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 22,
+          "uuid": "0d86e466-8490-7ddd-100f-ee82464d2580",
+          "name": "moneyduck14",
+          "storagePool": "faa-storage-pool",
+          "usage": 32085831024,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 23,
+          "uuid": "1abbb36c-54ed-7f43-014c-84dd1db3ae80",
+          "name": "moneyduck15",
+          "storagePool": "faa-storage-pool",
+          "usage": 32748633864,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 24,
+          "uuid": "e106d15f-5f77-7999-003e-0b1bf1398680",
+          "name": "moneyduck16",
+          "storagePool": "faa-storage-pool",
+          "usage": 14989279398,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 25,
+          "uuid": "8cfe24f7-5174-7754-002e-05ca02982180",
+          "name": "moneyduck17",
+          "storagePool": "faa-storage-pool",
+          "usage": 22278772260,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 26,
+          "uuid": "158a2fe5-ff85-7730-1083-590ec901be80",
+          "name": "moneyduck18",
+          "storagePool": "faa-storage-pool",
+          "usage": 8604993252,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 27,
+          "uuid": "0959c382-dc79-70e0-0045-479491c8f780",
+          "name": "moneyduck19",
+          "storagePool": "faa-storage-pool",
+          "usage": 51995714640,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 28,
+          "uuid": "8e5f7de3-b11b-74e2-0196-c9514bce2480",
+          "name": "moneyduck20",
+          "storagePool": "faa-storage-pool",
+          "usage": 41268155337,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 29,
+          "uuid": "b5c27e86-f976-762f-00f1-15b54e5db080",
+          "name": "moneyduckad1",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 30,
+          "uuid": "40473a42-7025-740b-0177-2eb3a5890280",
+          "name": "moneyduckad2",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 31,
+          "uuid": "f7467734-0de8-7181-104e-24d177b7ea80",
+          "name": "moneyduckad3",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 32,
+          "uuid": "f518ecf2-8604-7067-01c3-31ec1a054a80",
+          "name": "moneyduckad4",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 33,
+          "uuid": "4554532a-58d3-7abb-01bc-e663c3369980",
+          "name": "moneyduckad5",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 34,
+          "uuid": "a8f6740d-4359-74d7-014a-ed59172fb780",
+          "name": "moneyduckad6",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 35,
+          "uuid": "95b3d4df-f983-7968-1139-1ed401ddcd80",
+          "name": "moneyduckad7",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 36,
+          "uuid": "80af474b-11fe-71ff-1089-bbb9c6b23780",
+          "name": "moneyduckad8",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 37,
+          "uuid": "5f2b146b-41ce-74d6-10e9-a0c155fa5c80",
+          "name": "moneyduckad9",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 38,
+          "uuid": "69e46120-cc35-7bfd-00af-9831e39a2180",
+          "name": "moneyduckad10",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 39,
+          "uuid": "202ceaf2-3982-7ed7-00d3-05b9b723f180",
+          "name": "moneyduckad11",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 40,
+          "uuid": "91fc4252-45c6-74fe-00e7-f99042300080",
+          "name": "moneyduckad12",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 41,
+          "uuid": "da8c10e0-19ae-7bca-0030-d85b72793780",
+          "name": "moneyduckad13",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 42,
+          "uuid": "ed291da6-bfe2-7f92-112d-155d4728ae80",
+          "name": "moneyduckad14",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 43,
+          "uuid": "92570fe5-d2b0-7239-0150-b490a53dde80",
+          "name": "moneyduckad15",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 44,
+          "uuid": "b27d72ed-75e6-7615-00b6-1bd06c231780",
+          "name": "moneyduckad16",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 45,
+          "uuid": "d1a54625-861c-79a0-0108-f098c5ba5f80",
+          "name": "moneyduckad17",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 46,
+          "uuid": "dc0c90ac-12df-76db-01ee-28a1bf7b3a80",
+          "name": "moneyduckad18",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 47,
+          "uuid": "248da7bb-0a69-7bf0-10b2-b03b197ad380",
+          "name": "moneyduckad19",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 48,
+          "uuid": "aa2499d2-37e7-7f01-01fb-e7a061634980",
+          "name": "moneyduckad20",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 97,
+          "uuid": "69d7e27b-f26f-74a4-0165-57e8a6b5ef80",
+          "name": "metacache",
+          "storagePool": "cia-storage-pool",
+          "usage": 21520253988,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 96,
+          "uuid": "66f283c6-7f9a-7f22-007a-5ddb6af1fb80",
+          "name": "recon_orig",
+          "storagePool": "cia-storage-pool",
+          "usage": 79921717416,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 49,
+          "uuid": "1f8f147f-f850-769e-01d7-31f50853fa80",
+          "name": "stage_moneyduck1",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 50,
+          "uuid": "4f646e81-66df-7aaa-10d4-3656a0952580",
+          "name": "stage_moneyduck2",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 51,
+          "uuid": "83e72d9d-5fa0-7e73-10f9-25047dc86b80",
+          "name": "stage_moneyduck3",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 52,
+          "uuid": "d59bc646-ee1b-7a08-0180-802b06894080",
+          "name": "stage_moneyduck4",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 53,
+          "uuid": "e1fe1c31-e855-7e6f-008f-7fed1f553080",
+          "name": "stage_moneyduck5",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 54,
+          "uuid": "cb44086a-a973-7d26-017a-2274068ab580",
+          "name": "stage_moneyduck6",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 55,
+          "uuid": "87506590-0489-7b06-0042-29c75ffc5d80",
+          "name": "stage_moneyduck7",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 56,
+          "uuid": "546c2abd-74c0-7ad2-106d-e02b8c7d2980",
+          "name": "stage_moneyduck8",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 57,
+          "uuid": "8886df61-9652-75eb-1195-51b042e2ba80",
+          "name": "stage_moneyduck9",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 58,
+          "uuid": "93f6d63a-db00-7b8f-0163-be6d595e7a80",
+          "name": "stage_moneyduck10",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 59,
+          "uuid": "3d0ebf2e-7807-7fb5-10c7-8134e2496180",
+          "name": "stage_moneyduck11",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 60,
+          "uuid": "32fbe4bf-a2ba-7ebc-10a8-cdfe7ea31480",
+          "name": "stage_moneyduck12",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 61,
+          "uuid": "bfbc0582-f742-78d7-1050-7966ede37480",
+          "name": "stage_moneyduck13",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 62,
+          "uuid": "de3112d2-3f2d-7cd5-1158-77bee5f61e80",
+          "name": "stage_moneyduck14",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 63,
+          "uuid": "6f831710-53c1-7b89-01e7-cf90246dc380",
+          "name": "stage_moneyduck15",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 64,
+          "uuid": "c86ecd96-5c54-7132-0066-6678c83bf680",
+          "name": "stage_moneyduck16",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 65,
+          "uuid": "6f346024-410a-7f97-011a-a058de9c6a80",
+          "name": "stage_moneyduck17",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 66,
+          "uuid": "252f24e5-5aba-73a3-003e-733638e5b380",
+          "name": "stage_moneyduck18",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 67,
+          "uuid": "27573d9f-69eb-7c71-117c-bcb48263dd80",
+          "name": "stage_moneyduck19",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 68,
+          "uuid": "af3525ee-c91a-78f9-01fc-32db979cb880",
+          "name": "stage_moneyduck20",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 69,
+          "uuid": "23374a4f-f1d4-7bd9-1022-0c801e387580",
+          "name": "stage_moneyduckad1",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 70,
+          "uuid": "ac040ba8-ce99-7878-01f4-1455993b6680",
+          "name": "stage_moneyduckad2",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 71,
+          "uuid": "c196ba82-4d2e-7a45-00f4-f2cb5801ec80",
+          "name": "stage_moneyduckad3",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 72,
+          "uuid": "1c81089f-a00e-74b6-117b-e8e2c2dd3980",
+          "name": "stage_moneyduckad4",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 73,
+          "uuid": "cf327989-0b65-77b6-104d-2f3aa54ba480",
+          "name": "stage_moneyduckad5",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 74,
+          "uuid": "886b04df-d70f-76d6-0056-0bca46e51980",
+          "name": "stage_moneyduckad6",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 75,
+          "uuid": "1641cf5b-8d92-7b49-0019-ce12b85a0a80",
+          "name": "stage_moneyduckad7",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 76,
+          "uuid": "2b79422c-6066-7735-1028-03b871f99580",
+          "name": "stage_moneyduckad8",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 77,
+          "uuid": "633b8624-ea5d-7706-1150-a0a819997580",
+          "name": "stage_moneyduckad9",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 78,
+          "uuid": "855f78cb-1b10-7885-105b-9a66a501b480",
+          "name": "stage_moneyduckad10",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 79,
+          "uuid": "07dcc28b-6d7e-7c3f-0089-e94aa41e4f80",
+          "name": "stage_moneyduckad11",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 80,
+          "uuid": "d7180ca4-5c6a-7d76-0132-17c6d9936880",
+          "name": "stage_moneyduckad12",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 81,
+          "uuid": "582a935e-150e-7411-0119-203b09871280",
+          "name": "stage_moneyduckad13",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 82,
+          "uuid": "aa3826bd-6d2c-7b59-0077-0db115b33e80",
+          "name": "stage_moneyduckad14",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 83,
+          "uuid": "2e9781b0-14ac-7c23-00c4-60e14a182380",
+          "name": "stage_moneyduckad15",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 84,
+          "uuid": "49500a76-0a32-7127-00b2-8c2cf7ddc880",
+          "name": "stage_moneyduckad16",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 85,
+          "uuid": "6729bf2c-516f-7a1a-11fe-776c3f39af80",
+          "name": "stage_moneyduckad17",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 86,
+          "uuid": "426367b6-e315-78ca-01f0-ac0d316db580",
+          "name": "stage_moneyduckad18",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 87,
+          "uuid": "63bab6ac-e6a8-72c7-01bb-a20415381c80",
+          "name": "stage_moneyduckad19",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 88,
+          "uuid": "e86b9277-1d9c-763e-001b-bc3b0842a080",
+          "name": "stage_moneyduckad20",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 89,
+          "uuid": "12a5fa72-8da2-70e5-1164-e8e712f7b180",
+          "name": "aipiggybottest01",
+          "storagePool": "faa-storage-pool",
+          "usage": 226924380,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 90,
+          "uuid": "4bbd4aa7-1026-780b-102b-dfcaafcc0980",
+          "name": "aipiggybottest02",
+          "storagePool": "faa-storage-pool",
+          "usage": 12634248,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 91,
+          "uuid": "e1e81943-9916-71a8-001e-4ffe86480280",
+          "name": "aipiggybottest03",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        },
+        {
+          "id": 92,
+          "uuid": "4697cc26-b8ed-7f13-01ef-b5a1f86d6480",
+          "name": "aipiggybottest04",
+          "storagePool": "faa-storage-pool",
+          "usage": 0,
+          "usageReportingStart": "Tue, 01 Jan 2019 00:00:00 +0000",
+          "usageReportingEnd": "Wed, 02 Jan 2019 00:00:00 +0000"
+        }
+      ]
+    }
+  }
+}

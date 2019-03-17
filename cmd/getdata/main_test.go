@@ -30,7 +30,8 @@ func TeardownFunction() {
 
 }
 
-func TestWriteFile(t *testing.T) {
+
+func Test_process(t *testing.T) {
 
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
@@ -47,7 +48,7 @@ func TestWriteFile(t *testing.T) {
 			t.Errorf("got header %q, want %q", data, e)
 		}
 
-		data, err = ioutil.ReadFile("../../fixtures/data")
+		data, err = ioutil.ReadFile("../../fixtures/mainData")
 		if err != nil {
 
 			t.Fatalf("Error ioutil.ReadFile")
@@ -74,12 +75,8 @@ func TestWriteFile(t *testing.T) {
 		t.Fatalf("error")
 	}
 
-	dt := pkg.DateType{}
-	dt.Year = 2018
-	dt.Month = 7
-	dt.Day = 1
-	dt.AddDaysToList(1)
-	q.QueryList(dt)
+	process(q)
+
 
 	resultFile, err := ioutil.ReadFile("allData.csv")
 	if err != nil {
@@ -87,13 +84,15 @@ func TestWriteFile(t *testing.T) {
 		t.Fatalf("Error ioutil.ReadFile")
 	}
 
-	if len(resultFile) != 1550 {
-		t.Fatalf("File not correct")
+	if len(resultFile) != 208651 {
+		t.Fatalf("File not correct: %v\n",len(resultFile))
 	}
 
-	expected := "01-01-2019,20922538141144,15682982927025,15164138354,1461714289,107012615940,"
+	expected := "01-01-2019,2"
 	if strings.Contains(string(resultFile), expected) != true {
 		t.Fatalf("Values not in file")
 	}
 
+
 }
+
