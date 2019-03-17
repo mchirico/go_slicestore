@@ -71,18 +71,6 @@ func (q *Query) QueryList(d DateType) {
 	p.Write("allData.csv")
 }
 
-func (q *Query) Query() []byte {
-	y := yamlpkg.Config{}
-	file := fmt.Sprintf("%s/sliceStore.yaml", os.Getenv("HOME"))
-	y.Read(file)
-
-	url := fmt.Sprintf(
-		"https://%s/manager/api/json/1.0/vaultUsageReport.adm?dateRange=true&startDate=03/01/2019&endDate=03/02/2019",
-		y.Yaml.IP)
-
-	return Get(url, y.Yaml.Username, y.Yaml.Password)
-}
-
 func Write(file string, data []byte) error {
 	return ioutil.WriteFile(file, data, 0644)
 }
