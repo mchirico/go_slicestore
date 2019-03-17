@@ -39,9 +39,6 @@ func TestWriteFile(t *testing.T) {
 	}))
 	defer server.Close()
 
-	//result := Get(server.URL, "Mouse", "password123")
-	//log.Printf("result: %v\n", string(result))
-
 	mockYaml := func() yamlpkg.Config {
 		y := yamlpkg.Config{}
 		y.Yaml.IP = server.URL
