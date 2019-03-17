@@ -9,21 +9,53 @@ import (
 	"strings"
 )
 
-type Query struct{}
+type URLtype func(string, string, string) string
+type YamlFunction func() yamlpkg.Config
+type YamlValue yamlpkg.Config
 
-func (q *Query) QueryList(d DateType) {
+type Query struct {
+	yamlconfig  YamlFunction
+	urlFunction URLtype
+}
+
+func NewQuery(options ...func(*Query) error) (*Query, error) {
+	f := &Query{}
+
+	f.yamlconfig = defaultYaml
+	f.urlFunction = defaultURL
+
+	for _, op := range options {
+		err := op(f)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	return f, nil
+}
+
+func defaultYaml() yamlpkg.Config {
 	y := yamlpkg.Config{}
 	file := fmt.Sprintf("%s/sliceStore.yaml", os.Getenv("HOME"))
 	y.Read(file)
+	return y
+}
 
+func defaultURL(ip string, start string, end string) string {
+	url := fmt.Sprintf("https://%s/manager/api/json/1.0/"+
+		"vaultUsageReport.adm?"+
+		"dateRange=true&startDate=%s&endDate=%s", ip, start, end)
+	return url
+}
+
+func (q *Query) QueryList(d DateType) {
+
+	y := q.yamlconfig()
 	p := Pdata()
 
 	for _, v := range d.list.Days {
 
-		url := fmt.Sprintf("https://%s/manager/api/json/1.0/"+
-			"vaultUsageReport.adm?"+
-			"dateRange=true&startDate=%s&endDate=%s", y.Yaml.IP, v.Start, v.End)
-
+		url := q.urlFunction(y.Yaml.IP, v.Start, v.End)
 		data := Get(url, y.Yaml.Username, y.Yaml.Password)
 
 		vstart := strings.Replace(v.Start, "/", "_", -1)
