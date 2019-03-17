@@ -8,7 +8,7 @@ Pull Data from Slice Store
 
 
 
-## Build
+## Packages Used in Build
 
 ```bash
 
@@ -16,8 +16,6 @@ go get -u github.com/mchirico/date/parse
 go get gopkg.in/yaml.v2
 
 ```
-
-
 
 
 ## Build with Vendor
@@ -42,5 +40,30 @@ go build -v -mod=vendor ./cmd/getdata
 # You can now run
 
 ./getdata
+
+```
+
+
+## Usage
+
+Note: You must put your correct credentials in the `~/sliceStore.yaml`
+
+
+```bash
+
+cat > ~/sliceStore.yaml <<EOF
+ip: 10.10.10.10
+username: Spock
+password: Password123
+EOF
+
+
+# Now just run getdata
+
+./getdata
+
+
+# This will build allData.csv
+
 
 ```
