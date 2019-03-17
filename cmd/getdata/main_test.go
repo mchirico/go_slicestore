@@ -1,16 +1,34 @@
-package pkg
+package main
 
 import (
 	"encoding/base64"
+	"flag"
 	"fmt"
+	"github.com/mchirico/go_slicestore/pkg"
 	"github.com/mchirico/go_slicestore/yamlpkg"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"strings"
 	"testing"
 )
+
+func TestMain(m *testing.M) {
+	SetupFunction()
+	retCode := m.Run()
+	TeardownFunction()
+	os.Exit(retCode)
+}
+
+func SetupFunction() {
+	flag.Parse()
+}
+
+func TeardownFunction() {
+
+}
 
 func TestWriteFile(t *testing.T) {
 
@@ -29,7 +47,7 @@ func TestWriteFile(t *testing.T) {
 			t.Errorf("got header %q, want %q", data, e)
 		}
 
-		data, err = ioutil.ReadFile("../fixtures/data")
+		data, err = ioutil.ReadFile("../../fixtures/data")
 		if err != nil {
 
 			t.Fatalf("Error ioutil.ReadFile")
@@ -51,12 +69,12 @@ func TestWriteFile(t *testing.T) {
 		return y
 	}
 
-	q, err := NewQuery(OptionURL(MockURL), OptionYaml(mockYaml))
+	q, err := pkg.NewQuery(pkg.OptionURL(pkg.MockURL), pkg.OptionYaml(mockYaml))
 	if err != nil {
 		t.Fatalf("error")
 	}
 
-	dt := DateType{}
+	dt := pkg.DateType{}
 	dt.Year = 2018
 	dt.Month = 7
 	dt.Day = 1

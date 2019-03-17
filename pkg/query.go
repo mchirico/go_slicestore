@@ -74,3 +74,27 @@ func (q *Query) QueryList(d DateType) {
 func Write(file string, data []byte) error {
 	return ioutil.WriteFile(file, data, 0644)
 }
+
+// For testing
+
+func MockURL(ip string, start string, end string) string {
+	log.Printf("Example call:\n%s/manager/api/json/1.0/"+
+		"vaultUsageReport.adm?"+
+		"dateRange=true&startDate=%s&endDate=%s\n", ip, start, end)
+
+	return ip
+}
+
+func OptionURL(t URLtype) func(f *Query) error {
+	return func(f *Query) error {
+		f.urlFunction = t
+		return nil
+	}
+}
+
+func OptionYaml(t YamlFunction) func(f *Query) error {
+	return func(f *Query) error {
+		f.yamlconfig = t
+		return nil
+	}
+}

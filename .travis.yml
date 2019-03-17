@@ -12,6 +12,7 @@ matrix:
     install:
     - go get github.com/axw/gocov/gocov
     - go install github.com/axw/gocov/gocov
+    - go get -u github.com/mchirico/date/parse
     - go get gopkg.in/yaml.v2
     before_install:
     - openssl aes-256-cbc -k "$super_secret_password" -in fixtures/data.enc -out fixtures/data -d
