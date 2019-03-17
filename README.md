@@ -23,7 +23,7 @@ go mod init
 go mod vendor
 
 
-
+# Note: Fixtures are encrypted, so tests may not run correctly
 go test -v -mod=vendor ./...
 
 # Don't forget the "." in "./cmd/getdata" below
