@@ -71,12 +71,10 @@ EOF
 
 }
 
-func main() {
 
-	q, err := pkg.NewQuery()
-	if err != nil {
-		log.Fatalf("Error reading pkg.NewQuery()")
-	}
+func process(q *pkg.Query) {
+
+
 	pkg.DateFormat = "01/02/2006"
 	dt := pkg.DateType{}
 
@@ -97,5 +95,15 @@ func main() {
 		dt.Year, dt.Month, dt.Day, days+1)
 
 	q.QueryList(dt)
+
+}
+
+func main() {
+
+	q, err := pkg.NewQuery()
+	if err != nil {
+		log.Fatalf("Error reading pkg.NewQuery()")
+	}
+	process(q)
 
 }
