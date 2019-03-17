@@ -47,7 +47,20 @@ Examples:
     	  ./getdata -start "1/1/2019"  -end "3/1/2019"
 
 
-    If you don't specify and end, then, it will default to now
+    If you don't specify and end, then, it will default to the current date.
+
+
+Note:
+
+  You must have a ~/sliceStore.yaml setup with your information.
+
+
+cat > ~/sliceStore.yaml <<EOF
+ip: 10.10.10.10
+username: Spock
+password: Password123
+EOF
+
 
 
 `)
