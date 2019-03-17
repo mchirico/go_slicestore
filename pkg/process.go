@@ -32,7 +32,7 @@ func (p *pdata) Add(data []byte) {
 	ds := DS{}
 	err := json.Unmarshal(data, &ds)
 	if err != nil {
-		log.Printf("Can't Unmarshal in pkg.process")
+		log.Printf("Can't Unmarshal in pkg.process:%s\n", data)
 	}
 
 	for _, v := range ds.ResponseData.VaultUsageReport.Vaults {
