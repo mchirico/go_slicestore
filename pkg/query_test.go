@@ -13,9 +13,9 @@ import (
 )
 
 func mockURL(ip string, start string, end string) string {
-	log.Printf("https://%s/manager/api/json/1.0/"+
+	log.Printf("Example call:\n%s/manager/api/json/1.0/"+
 		"vaultUsageReport.adm?"+
-		"dateRange=true&startDate=%s&endDate=%s", ip, start, end)
+		"dateRange=true&startDate=%s&endDate=%s\n", ip, start, end)
 
 	return ip
 }
@@ -57,8 +57,6 @@ func TestWriteFile(t *testing.T) {
 			t.Fatalf("Error ioutil.ReadFile")
 		}
 
-		log.Printf("----------------\n\n*************\n")
-
 		fmt.Fprintln(w, string(data))
 	}))
 	defer server.Close()
@@ -86,5 +84,20 @@ func TestWriteFile(t *testing.T) {
 	dt.Day = 1
 	dt.AddDaysToList(1)
 	q.QueryList(dt)
+
+	resultFile, err := ioutil.ReadFile("allData.csv")
+	if err != nil {
+
+		t.Fatalf("Error ioutil.ReadFile")
+	}
+
+	if len(resultFile) != 1550 {
+		t.Fatalf("File not correct")
+	}
+
+	expected := "01-01-2019,20922538141144,15682982927025,15164138354,1461714289,107012615940,"
+	if strings.Contains(string(resultFile), expected) != true {
+		t.Fatalf("Values not in file")
+	}
 
 }
