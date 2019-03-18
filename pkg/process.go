@@ -89,6 +89,7 @@ type wvault struct {
 	end   string
 }
 
+// Code smells here ... write a test for this and clean up
 func (p *pdata) Write(file string) error {
 	data := ""
 

@@ -103,7 +103,7 @@ func MockURL(ip string, start string, end string) string {
 			"vaultUsageReport.adm?"+
 			"dateRange=true&startDate=%s&endDate=%s\n", ip, start, end)
 	}
-	
+
 	return ip
 }
 

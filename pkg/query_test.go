@@ -66,10 +66,6 @@ func TestWriteFile(t *testing.T) {
 		t.Fatalf("Error ioutil.ReadFile")
 	}
 
-	if len(resultFile) != 1550 {
-		t.Fatalf("File not correct")
-	}
-
 	expected := "01-01-2019,20922538141144,15682982927025,15164138354,1461714289,107012615940,"
 	if strings.Contains(string(resultFile), expected) != true {
 		t.Fatalf("Values not in file")
