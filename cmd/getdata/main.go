@@ -44,10 +44,7 @@ Examples:
 
     	  ./getdata -start "1/1/2019"
 
-    	  ./getdata -start "1/1/2019"  -end "3/1/2019"
 
-
-    If you don't specify and end, then, it will default to the current date.
 
 
 Note:
@@ -76,7 +73,7 @@ func process(q *pkg.Query) {
 	pkg.DateFormat = "01/02/2006"
 	dt := pkg.DateType{}
 
-	tt, err := parse.DateTimeParse("1/2/2018").GetTimeLoc()
+	tt, err := parse.DateTimeParse(*startDateFlag).GetTimeLoc()
 	if err != nil {
 		fmt.Printf("err: %v\n", err)
 		return
