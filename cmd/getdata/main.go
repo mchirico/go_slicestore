@@ -32,7 +32,7 @@ import (
 	"time"
 )
 
-var startDateFlag = flag.String("start", "6/1/2018", "Start Date")
+var startDateFlag = flag.String("start", "1/1/2019", "Start Date")
 var endDateFlag = flag.String("end", "now", "End Date")
 
 func init() {
@@ -73,7 +73,7 @@ func process(q *pkg.Query) {
 	pkg.DateFormat = "01/02/2006"
 	dt := pkg.DateType{}
 
-	tt, err := parse.DateTimeParse(*startDateFlag).GetTimeLoc()
+	tt, err := parse.DateTimeParse(*startDateFlag).GetTime()
 	if err != nil {
 		fmt.Printf("err: %v\n", err)
 		return
@@ -81,9 +81,11 @@ func process(q *pkg.Query) {
 
 	days := int(time.Since(tt).Hours() / 24)
 
-	dt.Year = int(tt.Year())
-	dt.Month = int(tt.Month())
-	dt.Day = int(tt.Day())
+	year, month, day := tt.Date()
+
+	dt.Year = year
+	dt.Month = int(month)
+	dt.Day = int(day)
 	dt.AddDaysToList(days + 1)
 
 	fmt.Printf("Year: %d  Month: %d  Day: %d  AddDays: %d\n",
